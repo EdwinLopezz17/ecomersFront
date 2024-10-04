@@ -1,27 +1,36 @@
-# Ecomers
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+ecommerce-app/
+│
+├── e2e/                            # Pruebas End-to-End
+├── src/
+│   ├── app/                        # Código principal de la aplicación
+│   │   ├── core/                   # Servicios y funcionalidades comunes (singleton services)
+│   │   │   ├── interceptors/       # Interceptores HTTP
+│   │   │   ├── guards/             # Guards de rutas
+│   │   │   ├── services/           # Servicios reutilizables en toda la app
+│   │   │   ├── models/             # Modelos de datos compartidos (Interfaces, clases)
+│   │   │   └── utils/              # Utilidades comunes (helpers, funciones)
+│   │   ├── shared/                 # Componentes, directivas y pipes reutilizables
+│   │   │   ├── components/         # Componentes UI compartidos (botones, formularios)
+│   │   │   ├── directives/         # Directivas reutilizables
+│   │   │   ├── pipes/              # Pipes reutilizables
+│   │   ├── features/               # Módulos específicos por funcionalidades
+│   │   │   ├── auth/               # Módulo de autenticación (login, register)
+│   │   │   ├── products/           # Módulo de productos
+│   │   │   │   ├── components/     # Componentes del módulo de productos
+│   │   │   │   ├── services/       # Servicios específicos de productos
+│   │   │   │   └── models/         # Modelos de datos específicos
+│   │   │   ├── cart/               # Módulo del carrito de compras
+│   │   │   ├── orders/             # Módulo de gestión de pedidos
+│   │   │   └── user/               # Módulo de perfil y gestión de usuarios
+│   │   ├── layouts/                # Plantillas y layouts generales (header, footer, sidebar)
+│   │   ├── environments/           # Configuración de entornos (dev, prod)
+│   │   ├── assets/                 # Recursos estáticos como imágenes, íconos, etc.
+│   │   │   ├── images/             # Imágenes del proyecto
+│   │   │   ├── icons/              # Íconos SVG o de otro tipo
+│   │   └── styles/                 # Archivos SCSS/CSS globales
+│   ├── assets/                     # Archivos públicos (favicon, manifest, etc.)
+│   ├── environments/               # Configuraciones específicas del entorno
+│   └── index.html                  # Punto de entrada HTML principal
+├── angular.json                    # Configuración de Angular CLI
+├── package.json                    # Dependencias y scripts del proyecto
+└── tsconfig.json                   # Configuración de TypeScript

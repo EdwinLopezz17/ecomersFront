@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary-color: #003366;          /* Azul Marino */
+  --secondary-color: #66CCFF;        /* Celeste Claro */
+  --background-color: #FFFFFF;       /* Blanco */
+  --secondary-background: #F4F4F9;   /* Gris Claro */
+  --text-color-primary: #333333;     /* Gris Oscuro */
+  --text-color-secondary: #666666;   /* Gris Medio */
+  --success-color: #4CAF50;          /* Verde Claro */
+  --error-color: #FF5252;            /* Rojo */
+  --cta-color: #FF9800;              /* Naranja Brillante */
+  --hover-background: #E0E0E0;       /* Gris Suave */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--background-color);
+
+}
+
