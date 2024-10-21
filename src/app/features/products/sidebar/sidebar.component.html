@@ -1,0 +1,32 @@
+
+<div class="sidebar" [ngClass]="{'collapsed': isCollapsed}">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapse()"> <mat-icon>menu</mat-icon> </button>
+    @if (!isCollapsed) {
+      <div class="logo-text">Filter</div>
+      <button class="btn-close" (click)="closeSidenav()">
+        <mat-icon>close</mat-icon>
+      </button>
+    }
+  </div>
+
+  <section class="price">
+    <div class="info">
+      <mat-icon>price_check</mat-icon>
+      @if(!isCollapsed){
+        <span>Price Range</span>
+      }
+    </div>
+
+    @if(!isCollapsed){
+      <div class="range-input">
+        <input type="number" placeholder="50.00">
+        <p>to</p>
+        <input type="number" placeholder="200.00">
+      </div>
+    }
+  </section>
+
+</div>
+
+

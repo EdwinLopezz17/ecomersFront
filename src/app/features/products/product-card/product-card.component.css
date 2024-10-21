@@ -1,0 +1,84 @@
+.card {
+  background: var(--background-color);
+  width: 350px;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card .image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card .image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card .image mat-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+  color: var(--secondary-background);
+  width: max-content;
+  height: max-content;
+  font-size: 2.5rem;
+}
+
+.card .image mat-icon:hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+}
+.card .info {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+}
+.card .info .title-product {
+  font-size: 1.2rem;
+  color: var(--text-color-primary);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.card .info .text{
+  width:100%;
+}
+.card .info .author,
+.card .info .date,
+.card .info .price {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  font-weight: 500;
+}
+
+.card .info .stars {
+  font-size: 1rem;
+  color: var(--text-color-primary);
+  align-content: end;
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.card .info .stars mat-icon {
+  color: var(--primary-color);
+}

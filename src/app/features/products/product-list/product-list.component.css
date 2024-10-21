@@ -1,0 +1,14 @@
+
+.products-page{
+  display: flex;
+  flex-direction: row;
+}
+.products-container{
+
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
